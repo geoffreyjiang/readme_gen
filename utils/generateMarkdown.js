@@ -1,9 +1,9 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
-//Title
-`# ${response.title}
+function generateMarkdown(response) {
+`Title
+# ${response.title}`
 
-## Description
+`## Description
 ${response.description}`
 
 
