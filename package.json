@@ -1,0 +1,16 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "file-system": "^2.2.2",
+    "inquirer": "^6.3.1"
+  }
+}

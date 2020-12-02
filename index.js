@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const genMarkdown = require(`Develop/utils/generateMarkdown.js`);
+const genMarkdown = require(`./utils/generateMarkdown`);
 
 
 const questions = [
@@ -32,7 +32,7 @@ const questions = [
     {
         type: "input",
         name: "license",
-        message: "Enter licenses used?",
+        message: "Enter licenses used",
         choices: [`MIT License`, `Apache License`, `GPL License`, `Mozilla Public License`, `Eclipse Public License`]
     },
     {
@@ -51,6 +51,14 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    function writeToFile(fileName, data) {
+        fs.watchFile(fileName, data, (err) => {
+            if (err) {
+                return console.log(err)
+            }
+            console.log("NO ERR!!")
+        })
+    }
 }
 
 // function to initialize program
