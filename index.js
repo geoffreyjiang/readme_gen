@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const genMarkdown = require(`./utils/generateMarkdown`);
+const genMarkdown = require(`Develop/utils/generateMarkdown.js`);
 
 
 const questions = [
@@ -39,7 +39,7 @@ const questions = [
         type: "input",
         name: "username",
         message: "Enter Github username"
-    }
+    },    
     {
         type: "input",
         name: "email",
