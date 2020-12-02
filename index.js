@@ -7,12 +7,12 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "What is the title of this project?"
+        message: "Enter project title"
     },
     {
         type: "input",
         name: "description",
-        message: "Provide a description of this project"
+        message: "Enter project description"
     },
     {
         type: "input",
@@ -27,12 +27,12 @@ const questions = [
     {
         type: "input",
         name: "contributors",
-        message: "Name all contributors"
+        message: "Enter contributors"
     },
     {
         type: "input",
         name: "license",
-        message: "What licenses did you use?",
+        message: "Enter licenses used?",
         choices: [`MIT License`, `Apache License`, `GPL License`, `Mozilla Public License`, `Eclipse Public License`]
     },
     {
