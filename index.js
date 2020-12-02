@@ -51,14 +51,12 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    function writeToFile(fileName, data) {
-        fs.watchFile(fileName, data, (err) => {
-            if (err) {
-                return console.log(err)
-            }
-            console.log("NO ERR!!")
-        })
-    }
+    fs.watchFile(fileName, data, (err) => {
+        if (err) {
+            return console.log(err)
+        }
+        console.log("NO ERR!!")
+    })
 }
 
 // function to initialize program
