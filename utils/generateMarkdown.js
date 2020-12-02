@@ -2,36 +2,36 @@
 function generateMarkdown(response) {
 //Title
 `# Title
-${userResponse.title}`
+${response.title}`
 
 `## Description
-${userResponse.description}`
+${response.description}`
 
 
 //Installations
 `## Installation:
-${userResponse.installation}`
+${response.installation}`
 
 //Usage
 `## Usage:
-${userResponse.usage}`
+${response.usage}`
 
 //Contribution
 `## Contribution
-${userResponse.contributors}`
+${response.contributors}`
 
 //License
 `## License
-${userResponse.license}`
+${response.license}`
 
 
 //Tests
 `## Tests
-${userResponse.tests}`
+${response.tests}`
 
 //Questions
 `## Contact
-${userResponse.contact}`
+${response.contact}`
 
 
 return response
