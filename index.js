@@ -45,12 +45,12 @@ const questions = [
     },
     {
         type: "input",
-        name: "username",
+        name: "contact",
         message: "Enter Github username"
     },    
     {
         type: "input",
-        name: "email",
+        name: "contact",
         message: "Enter Email"
     }
 ];
@@ -72,7 +72,7 @@ async function init() {
         console.log(response);
 
         const markdown = genMarkdown(response)
-        await writeFile("DemoReadMe.md", markdown)
+        await writeFile("ReadMe.md", markdown)
     } catch (err) {
         console.log(err)
     }
