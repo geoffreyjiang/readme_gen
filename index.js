@@ -43,6 +43,11 @@ function questions() {
       message: "Enter licenses used",
   },
   {
+    type: "input",
+    name: "tech",
+    message: "Enter programs used",
+},
+  {
       type: "input",
       name: "github",
       message: "Enter Github repo link"

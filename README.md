@@ -28,6 +28,10 @@
 	Victor Tran  
   ## License
     MIT
+  ## Programs
+    VS Code
+	Node
+	Inquirer	
   ## Contact
     https://github.com/geoffreyjiang
 	geoffreychjiang@gmail.com

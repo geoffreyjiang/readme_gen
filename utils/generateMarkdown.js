@@ -8,10 +8,12 @@ function generateMarkdown(response) {
     - [Description](#description)
     - [Installation](#installation)
     - [Usage](#usage)
-    - [License](#license)
-    - [Contribution](#contribution)
     - [Tests](#tests)
-    - [Questions](#questions)
+    - [License](#license)
+    - [Technolgies Used](#tech)
+    - [Contribution](#contribution)
+    - [Github](#github)
+    - [Email](#email)
     
   ## Description
       ${response.description}
@@ -24,7 +26,9 @@ function generateMarkdown(response) {
   ## Contributors
     ${response.contributors}  
   ## License
-    ${response.license}
+    ${response.license}  
+  ## Programs
+    ${response.tech}  
   ## Github
     ${response.github}
   ## Email
