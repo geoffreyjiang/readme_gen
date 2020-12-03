@@ -21,8 +21,8 @@
 	2. Type node index.js in terminal
 	3. Answer the questions clear and concisely 
 	4. Done!
-  ## Tests
-    None yet
+  ## Test
+  <img src= "assets/gifs/testrun.gif">
   ## Contributors
     Geoffrey Jiang
 	Victor Tran  
