@@ -1,8 +1,7 @@
-function generateMarkdown(response) {
-  return `
+
 
   ## Title
-  ${response.title}
+  The Title
 
   ## Table of Contents
     - [Description](#description)
@@ -14,23 +13,18 @@ function generateMarkdown(response) {
     - [Questions](#questions)
     
   ## Description
-      ${response.description}
+      Description
   ## Installation:
-    ${response.installation}
+    1. Do This \n 2. Then this
   ## Usage:
-    ${response.usage}
+    Like This
   ## Tests
-    ${response.tests}
+    Not yet
   ## Contributors
-    ${response.contributors}  
+    Me n vic  
   ## License
-    ${response.license}
+    MIT
   ## Github
-    ${response.github}
+    Here
   ## Email
-    ${response.contact}`  
-}
-module.exports = generateMarkdown;
-
-
-
+    Here

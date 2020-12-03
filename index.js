@@ -24,7 +24,7 @@ function questions() {
   {
       type: "input",
       name: "usage",
-      message: "How do I use this app?"
+      message: "How do I use this app?",
   },
   {
       type: "input",
@@ -34,7 +34,7 @@ function questions() {
   {
       type: "input",
       name: "contributors",
-      message: "Enter contributors"
+      message: "Enter contributors" 
   },
   {
       type: "input",
@@ -44,8 +44,8 @@ function questions() {
   },
   {
       type: "input",
-      name: "contact",
-      message: "Enter Github username"
+      name: "github",
+      message: "Enter Github repo link"
   },    
   {
       type: "input",
@@ -74,7 +74,7 @@ async function init() {
         console.log(response);
         const markdown = generateMarkdown(response)
         console.log(markdown)
-        await writeReadme("ReadMe.md", markdown)
+        await writeReadme("PracReadMe.md", markdown)
     } catch (err) {
         console.log(err)
     }
