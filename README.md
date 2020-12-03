@@ -1,6 +1,6 @@
 
+	##Readme Generator
 
-  Work 
 
   ## Table of Contents
     - [Description](#description)
@@ -12,16 +12,22 @@
     - [Questions](#questions)
     
   ## Description
-      Please
+      This app allows users to quickly create and write a readme.md file through node. User will be asked a series of questions that will transfer over to a readme template.
   ## Installation:
-    Man
+    1. Download or clone from repository.
+	2. NPM install when inside folder
   ## Usage:
-    Cool
+    1. Open terminal, navigate to folder
+	2. Type node index.js in terminal
+	3. Answer the questions clear and concisely 
+	4. Done!
   ## Tests
-    Yo
+    None yet
   ## Contributors
-    HA  
+    Geoffrey Jiang
+	Victor Tran  
   ## License
-    HA
+    MIT
   ## Contact
-    f
+    https://github.com/geoffreyjiang
+	geoffreychjiang@gmail.com
