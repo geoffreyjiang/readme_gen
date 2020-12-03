@@ -22,7 +22,7 @@
 	3. Answer the questions clear and concisely 
 	4. Done!
   ## Test
-  <img src= "assets/gifs/testrun.gif" height="300px">
+  <img src= "assets/gifs/testrun.gif" width = "600px" height="300px">
   
   ## Contributors
     Geoffrey Jiang
