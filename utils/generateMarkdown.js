@@ -1,41 +1,33 @@
-// function to generate markdown for README
 function generateMarkdown(response) {
-//Title
-`# Title
-${response.title}`
+  return `
 
-`## Description
-${response.description}`
+  ${response.title}
 
-
-//Installations
-`## Installation:
-${response.installation}`
-
-//Usage
-`## Usage:
-${response.usage}`
-
-//Contribution
-`## Contribution
-${response.contributors}`
-
-//License
-`## License
-${response.license}`
-
-
-//Tests
-`## Tests
-${response.tests}`
-
-//Questions
-`## Contact
-${response.contact}`
-
-
-return response
+  ## Table of Contents
+    - [Description](#description)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contribution](#contribution)
+    - [Tests](#tests)
+    - [Questions](#questions)
+    
+  ## Description
+      ${response.description}
+  ## Installation:
+    ${response.installation}
+  ## Usage:
+    ${response.usage}
+  ## Tests
+    ${response.tests}
+  ## Contributors
+    ${response.contributors}  
+  ## License
+    ${response.license}
+  ## Contact
+    ${response.contact}`
 }
-
-
 module.exports = generateMarkdown;
+
+
+

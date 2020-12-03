@@ -1,96 +1,84 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require("./utils/generateMarkdown");
 const util = require('util')
-const writeFile = util.promisify(writeToFile)
+const generateMarkdown = require("./utils/generateMarkdown")
 
 
-
-const questions = [
-    {
-        type: "input",
-        name: "title",
-        message: "Enter project title"
-    },
-    {
-        type: "input",
-        name: "description",
-        message: "Enter project description"
-    },
-    {
-        type: "input",
-        name: "installation",
-        message: "How do I install this app?"
-    },
-    {
-        type: "input",
-        name: "usage",
-        message: "How do I use this app?"
-    },
-    {
-        type: "input",
-        name: "tests",
-        message: "Enter any tests"
-    },
-    {
-        type: "input",
-        name: "contributors",
-        message: "Enter contributors"
-    },
-    {
-        type: "input",
-        name: "license",
-        message: "Enter licenses used",
-        choices: [`MIT License`, `Apache License`, `GPL License`, `Mozilla Public License`, `Eclipse Public License`]
-    },
-    {
-        type: "input",
-        name: "contact",
-        message: "Enter Github username"
-    },    
-    {
-        type: "input",
-        name: "contact",
-        message: "Enter Email"
-    }
-];
+function questions() {
+  return inquirer.prompt([
+  {
+      type: "input",
+      name: "title",
+      message: "Enter project title"
+  },
+  {
+      type: "input",
+      name: "description",
+      message: "Enter project description"
+  },
+  {
+      type: "input",
+      name: "installation",
+      message: "How do I install this app?"
+  },
+  {
+      type: "input",
+      name: "usage",
+      message: "How do I use this app?"
+  },
+  {
+      type: "input",
+      name: "tests",
+      message: "Enter any tests"
+  },
+  {
+      type: "input",
+      name: "contributors",
+      message: "Enter contributors"
+  },
+  {
+      type: "input",
+      choices: [`MIT License`, `Apache License`, `GPL License`, `Mozilla Public License`, `Eclipse Public License`],
+      name: "license",
+      message: "Enter licenses used",
+  },
+  {
+      type: "input",
+      name: "contact",
+      message: "Enter Github username"
+  },    
+  {
+      type: "input",
+      name: "contact",
+      message: "Enter Email"
+  },
+]);
+}
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.watchFile(fileName, data, (err) => {
+    fs.writeFile(fileName, data, (err) => {
         if (err) {
             return console.log(err)
         }
-        console.log("NO ERR!!")
+        console.log("Done!")
     })
 }
 
-// // function to initialize program
-// async function init() {
-//     try {
-//         const response = await inquirer.prompt(questions);
-//         console.log(response);
+const writeReadme = util.promisify(writeToFile)
 
-//         const markdown = genenerateMarkdown(response)
-//         await writeFile("ReadMe.md", markdown)
-//     } catch (err) {
-//         console.log(err)
-//     }
-
-// }
-
+// function to initialize program
 async function init() {
     try {
-        const response = await inquirer.prompt(questions);
-  
-      const readme = generateMarkdown(response);
-  
-      await writeFileAsync("README.md", readme);
-      console.log("success");
+        const response = await questions();
+        console.log(response);
+        const markdown = generateMarkdown(response)
+        console.log(markdown)
+        await writeReadme("ReadMe.md", markdown)
     } catch (err) {
-      console.log(err);
+        console.log(err)
     }
-  }
+}
 
 // function call to initialize program
 init();
